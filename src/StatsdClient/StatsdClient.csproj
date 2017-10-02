@@ -1,75 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{77B1707A-9123-4CD9-9A18-A8D7F4794D71}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StatsdClient.HighPerformance</RootNamespace>
-    <AssemblyName>StatsdClient.HighPerformance</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworks>netstandard2.0;net40;net45;net46</TargetFrameworks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>        
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <PackageId>StatsdClient.HighPerformance</PackageId>
+    <PackageVersion>1.1</PackageVersion>
+    <Title>High Performance StatsD Client</Title>
+    <PackageProjectUrl>https://github.com/Kyle2123/statsd-csharp-client</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Kyle2123/statsd-csharp-client/blob/master/MIT-LICENCE.md</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright 2017</Copyright>
+    <Authors>Kyle West</Authors>
+    <Description>
+      High Performance StatsD Client.  Supports client-side metric aggregation and multiple metrics per UDP packet.  Completely thread-safe.
+    </Description>
+    <PackageReleaseNotes>
+      Add support for .NET Standard 2.0
+    </PackageReleaseNotes>
+    <PackageTags>stats statsd metrics aggregation</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="MetricTypes\Metric.cs" />
-    <Compile Include="IRandomGenerator.cs" />
-    <Compile Include="IStatsd.cs" />
-    <Compile Include="IStatsdUDP.cs" />
-    <Compile Include="IStopwatch.cs" />
-    <Compile Include="IStopWatchFactory.cs" />
-    <Compile Include="Metrics.cs" />
-    <Compile Include="MetricsConfig.cs" />
-    <Compile Include="MetricsTimer.cs" />
-    <Compile Include="MetricTypes\Gauge.cs" />
-    <Compile Include="MetricTypes\Set.cs" />
-    <Compile Include="MetricTypes\Meter.cs" />
-    <Compile Include="MetricTypes\Histogram.cs" />
-    <Compile Include="MetricTypes\Timing.cs" />
-    <Compile Include="MetricTypes\Counting.cs" />
-    <Compile Include="NullStatsd.cs" />
-    <Compile Include="RandomGenerator.cs" />
-    <Compile Include="Senders\BatchSender.cs" />
-    <Compile Include="Senders\MockSender.cs" />
-    <Compile Include="Senders\ISender.cs" />
-    <Compile Include="Senders\ImmediateSender.cs" />
-    <Compile Include="Senders\ThreadSafeConsumerProducerSender.cs" />
-    <Compile Include="Statsd.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatsdUDP.cs" />
-    <Compile Include="Stopwatch.cs" />
-    <Compile Include="StopWatchFactory.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

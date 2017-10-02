@@ -1,7 +1,4 @@
-echo "Make sure you've built the project in release mode first!"
-pause
-
-lib\NuGet.exe pack src\StatsdClient\StatsdClient.csproj -Prop Configuration=Release
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild" /t:pack /p:Configuration=Release src\StatsdClient\StatsdClient.csproj
 
 echo "Publish the .nupkg file"
 pause

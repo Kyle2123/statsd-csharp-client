@@ -21,14 +21,14 @@ namespace Tests
         private StatsdUDP udp;
         private List<string> lastPulledMessages;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUpUdpListenerAndStatsd()
         {
             udpListener = new UdpListener(serverName, serverPort);
             udp = new StatsdUDP(serverName, serverPort);
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDownUdpListener()
         {
             udpListener.Dispose();
